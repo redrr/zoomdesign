@@ -1,0 +1,110 @@
+html body {
+    font-family: Verdana, sans-serif;
+}
+
+.subtitle {
+    font-weight: 700;
+    line-height: .8;
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    letter-spacing: 12px;
+}
+
+.maintitle {
+    font-size: 1.69rem!important;
+    line-height: .8!important;
+    font-family: Copperplate, 'Copperplate', sans-serif;
+}
+
+.contact-menu {
+    z-index: 1040;
+    margin-top: -230px;
+    transition: .5s ease-in-out;
+}
+
+.contact-menu.active {
+    margin-top: -37px;
+    transition: .5s ease-in-out;
+}
+
+.navbar-holder {
+    z-index: 1050;
+}
+
+.btn-contact-close {
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 0 0 16px 16px;
+    margin-left: 50px;
+    transition: .25s ease-in-out;
+}
+
+.btn-contact-close:hover span {
+    color: cornflowerblue;
+    transition: .25s ease-in-out;
+}
+
+.grid {
+    background: black!important;
+}
+
+.grid div div {
+    margin: 2px!important;
+    overflow: hidden;
+}
+
+.grid div div img {
+    transition: transform 1.5s ease-out, opacity 1.5s, -webkit-transform 1.5s ease-out;
+    overflow: hidden;
+}
+
+.grid div div img:hover {
+    transform: scale(1.05);
+    transition: transform 1.5s ease-out, opacity 1.5s, -webkit-transform 1.5s ease-out;
+    cursor: pointer;
+}
+
+.text-active {
+    font-weight: bold;
+}
+
+.img-title {
+    margin-top: -35px;
+    margin-left: 25px;
+    z-index: 99;
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    font-weight: 100!important;
+    text-shadow: 0px 0px 12px rgb(0 0 0 / 100%)
+}
+
+.carousel-indicators {
+    top: 50px;
+    justify-content: left;
+    margin-left: 8%;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: unset;
+    border: 0;
+    border-top: unset;
+    border-bottom: unset;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border-radius: 20px;
+}
+
+.carousel-indicators [data-bs-target].active {
+    opacity: 1;
+}
