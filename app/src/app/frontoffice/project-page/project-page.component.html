@@ -1,0 +1,17 @@
+<app-loading-page [loading]="loading"></app-loading-page>
+<app-header></app-header>
+<main class="container-fluid" style="margin-top: -37px">
+  <div class="row" style="position: absolute;z-index: 9; margin-top: 40px">
+    <div class="col">
+      <h1 class="text-white" style="padding-left: 90px">{{title}}</h1>
+    </div>
+  </div>
+  <div class="row grid">
+    <div *ngFor="let image of images; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
+      <div>
+        <img src="http://syndom.hu/demo/api/uploads/projects/{{id}}/{{image.img}}" class="img-fluid" alt="{{image.desc}}">
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

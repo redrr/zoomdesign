@@ -1,18 +1,21 @@
 html body {
     font-family: Verdana, sans-serif;
+    background: black;
 }
 
 .subtitle {
     font-weight: 700;
     line-height: .8;
     font-family: 'Avenir Next LT Pro', sans-serif;
-    letter-spacing: 12px;
+    letter-spacing: 11.5px;
 }
 
 .maintitle {
-    font-size: 1.69rem!important;
+    font-size: 1.5rem!important;
     line-height: .8!important;
     font-family: Copperplate, 'Copperplate', sans-serif;
+    letter-spacing: 2px;
+    transform: scaleY(.9);
 }
 
 .contact-menu {
@@ -48,20 +51,33 @@ html body {
     background: black!important;
 }
 
+.grid div {
+    text-align: center;
+}
+
 .grid div div {
-    margin: 2px!important;
+    margin: 1.1px!important;
     overflow: hidden;
 }
 
 .grid div div img {
-    transition: transform 1.5s ease-out, opacity 1.5s, -webkit-transform 1.5s ease-out;
+    transition: transform 3.5s ease-out;
     overflow: hidden;
 }
 
 .grid div div img:hover {
-    transform: scale(1.05);
-    transition: transform 1.5s ease-out, opacity 1.5s, -webkit-transform 1.5s ease-out;
+    transform: scale(1.1);
+    transition: transform .9s ease-out;
     cursor: pointer;
+}
+
+.img-title {
+    opacity: 0;
+}
+
+.grid div:hover .img-title {
+    opacity: 1;
+    transition: .3s;
 }
 
 .text-active {
@@ -70,9 +86,8 @@ html body {
 
 .img-title {
     margin-top: -35px;
-    margin-left: 25px;
     z-index: 99;
-    position: absolute;
+    position: relative;
     color: white;
     font-size: 1rem;
     font-weight: 100!important;
@@ -80,31 +95,61 @@ html body {
 }
 
 .carousel-indicators {
-    top: 50px;
+    top: 43px;
     justify-content: left;
-    margin-left: 8%;
+    margin-left: 7.1%;
+    margin-bottom: 100px;
 }
 
 .carousel-indicators [data-bs-target] {
     box-sizing: content-box;
     flex: 0 1 auto;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     padding: 0;
-    margin-right: 3px;
-    margin-left: 3px;
+    margin-right: 4px;
+    margin-left: 4px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: transparent;
     background-clip: unset;
-    border: 0;
-    border-top: unset;
-    border-bottom: unset;
-    opacity: .5;
+    border: 2px solid white;
+    opacity: 1;
     transition: opacity .6s ease;
     border-radius: 20px;
 }
 
 .carousel-indicators [data-bs-target].active {
+    background-color: white;
+}
+
+.carousel-indicators [data-bs-target].active {
     opacity: 1;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.carousel-item.active img {
+    transform: scale(1.15);
+    transform-origin: 75% 75%;
+    transition: 7s linear;
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+}
+
+#footer-images div {
+    max-height: 56px;
+    overflow-y: hidden;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    align-items: end;
+    margin-bottom: 45px;
 }
