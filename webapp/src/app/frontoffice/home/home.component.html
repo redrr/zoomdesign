@@ -27,7 +27,7 @@
     <div (click)="navTo(project)" *ngFor="let project of projects; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
       <div>
         <img src="http://syndom.hu/demo/api/uploads/projects/{{project.img}}" class="img-fluid" alt="{{project.desc}}">
-        <h3 class="img-title">{{getProjectName(project)}}</h3>
+        <h3 class="img-title" style="text-shadow: 0px 0px 4px rgb(0 0 0)">{{getProjectName(project)}}</h3>
       </div>
     </div>
   </div>
