@@ -22,6 +22,10 @@ export class CrudService {
     return this.http.post(AUTH_API.concat(endpoint), obj, httpOptions)
   }
 
+  public patch(endpoint: string, obj: any): Observable<Object> {
+    return this.http.patch(AUTH_API.concat(endpoint), obj, httpOptions)
+  }
+
   public delete(endpoint: string): Observable<Object> {
     return this.http.delete(AUTH_API.concat(endpoint), httpOptions)
   }

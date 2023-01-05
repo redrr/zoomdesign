@@ -41,4 +41,12 @@ export class HeaderComponent implements OnInit {
   isLang(lang: string): string {
     return localStorage.getItem("lang") === lang ? "text-active" : ""
   }
+
+  music(): void {
+    let player = document.getElementById("audio_player")
+    if (player) {
+      // @ts-ignore
+      player.paused ? player.play() : player.pause()
+    }
+  }
 }

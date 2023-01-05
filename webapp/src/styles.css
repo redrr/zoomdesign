@@ -9,6 +9,15 @@ html body {
   font-family: 'Avenir Next LT Pro', sans-serif;
   letter-spacing: 11.5px;
   text-shadow: 0px 0px 4px rgba(0,0,0,.8);
+  font-size: 40px;
+  margin-right: -8px;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 40px;
+    margin-right: 0;
+  }
 }
 
 .maintitle {
@@ -39,7 +48,7 @@ html body {
   border: none;
   outline: none;
   border-radius: 0 0 16px 16px;
-  margin-left: 70px;
+  margin-left: 60px;
   transition: .25s ease-in-out;
 }
 
@@ -94,8 +103,14 @@ html body {
 .carousel-indicators {
   top: 43px;
   justify-content: left;
-  margin-left: 7.1%;
   margin-bottom: 100px;
+  width: 329px;
+}
+
+@media (min-width: 768px) {
+  .carousel-indicators {
+    width: 100%;
+  }
 }
 
 .carousel-indicators [data-bs-target] {
@@ -294,4 +309,8 @@ button.sb-wrapper:hover {
 
 i.fa-brands.fa-facebook-f {
   font-size: 22px!important;
+}
+
+.cursor-pointer:hover {
+  cursor: pointer;
 }

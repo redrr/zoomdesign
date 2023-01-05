@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {CrudService} from "../../crud.service";
+import {CrudService} from "../../services/crud.service";
 
 @Component({
   selector: 'app-project-page',

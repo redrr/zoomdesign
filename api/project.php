@@ -41,6 +41,39 @@ switch ($_SERVER['REQUEST_METHOD']) {
         echo $db->query($ins_sql);
         break;
     }
+    case 'PATCH': {
+        $json = file_get_contents('php://input');
+        $data = json_decode($json);
+        $col_sql = "UPDATE `PROJECT` SET";
+        $_add = false;
+        if (isset($data->file_name) && isset($data->old_name) && isset($data->image)) {
+            if (unlink("uploads/projects/".$data->old_name)) {
+                $col_sql = $col_sql . " `IMG` = '".$data->file_name."'";
+                file_put_contents("uploads/projects/".$data->file_name, file_get_contents($data->image));
+                $_add = true;
+            }
+        }
+        if (isset($data->hun_name)) {
+            $col_sql = $col_sql." `HUN_NAME` = '".$data->hun_name."'";
+            $_add = true;
+        }
+        if (isset($data->en_name)) {
+            $col_sql = $col_sql." `EN_NAME` = '".$data->en_name."'";
+            $_add = true;
+        }
+        if (isset($data->description)) {
+            $col_sql = $col_sql." `DESCRIPTION` = '".$data->description."'";
+            $_add = true;
+        }
+        $val_sql = " WHERE `ID` = '".$data->id."'";
+        if ($_add) {
+            $ins_sql = $col_sql.$val_sql;
+            echo $db->query($ins_sql);
+        } else {
+            echo "";
+        }
+        break;
+    }
     case 'DELETE': {
         $del_sql = "DELETE FROM `PROJECT` WHERE ID = ".$_REQUEST["id"];
         if ($db->query($del_sql)) {

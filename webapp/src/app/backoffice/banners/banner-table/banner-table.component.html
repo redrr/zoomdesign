@@ -5,11 +5,11 @@
       <div class="card card-body bg-white shadow-sm">
         <div class="row">
           <div class="col">
-            <h1>Banner List</h1>
+            <h1>Banner Lista</h1>
           </div>
           <div class="col text-end">
             <button type="button" class="btn btn-primary" (click)="new()">
-              <i class="fa fa-plus"></i> New
+              <i class="fa fa-plus"></i> Új
             </button>
           </div>
         </div>
@@ -17,8 +17,9 @@
           <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Description</th>
+            <th scope="col">Fájlnév</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
             <th scope="col"></th>
           </tr>
           </thead>
@@ -26,10 +27,19 @@
           <tr *ngFor="let item of list;">
             <th scope="row">{{item.id}}</th>
             <td>{{item.name}}</td>
-            <td>{{item.desc}}</td>
+            <td>
+              <a target="_blank" href="http://syndom.hu/demo/api/uploads/banners/{{item.name}}" class="btn btn-outline-secondary">
+                <i class="fa fa-eye"></i> Megtekint
+              </a>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-warning" (click)="update(item.id)">
+                <i class="fa fa-edit"></i> Szerkesztés
+              </button>
+            </td>
             <td>
               <button type="button" class="btn btn-outline-danger" (click)="delete(item)">
-                <i class="fa fa-trash"></i> Delete
+                <i class="fa fa-trash"></i> Törlés
               </button>
             </td>
           </tr>

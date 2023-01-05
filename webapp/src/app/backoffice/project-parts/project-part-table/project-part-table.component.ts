@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CrudService} from "../../../crud.service";
+import { CrudService } from '../../../services/crud.service';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -28,6 +28,10 @@ export class ProjectPartTableComponent {
 
   new(): void {
     this.router.navigateByUrl("project/".concat(this.id).concat("/part/new"))
+  }
+
+  update(part_id: any): void {
+    this.router.navigateByUrl("project/".concat(this.id).concat("/part/edit/").concat(part_id))
   }
 
   delete(data: any) : void {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TokenStorageService} from "../../services/token-storage.service";
 
 @Component({
   selector: 'app-admin-header',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
   }
 
+  logout(): void {
+    this.tokenStorage.removeToken()
+    window.location.reload()
+  }
 }

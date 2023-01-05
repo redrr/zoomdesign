@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CrudService} from "../../../crud.service";
+import {CrudService} from "../../../services/crud.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -20,6 +20,10 @@ export class BannerTableComponent {
 
   new(): void {
     this.router.navigateByUrl("banner/new")
+  }
+
+  update(id: any): void {
+    this.router.navigateByUrl("banner/edit/".concat(id))
   }
 
   delete(data: any) : void {

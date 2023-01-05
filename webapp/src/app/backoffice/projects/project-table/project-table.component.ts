@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CrudService} from "../../../crud.service";
+import { CrudService } from '../../../services/crud.service';
 import {Router} from "@angular/router";
 
 @Component({
@@ -16,7 +16,7 @@ export class ProjectTableComponent {
     service.get(this.endpoint).subscribe(data => {
       this.list = data as []
       for (const i in this.list) {
-        service.get("project-part.php?id=".concat(this.list[i].id)).subscribe(data => {
+        service.get("project-part.php?project_id=".concat(this.list[i].id)).subscribe(data => {
           this.list[i].db = ((data as []) || []).length
         })
       }
@@ -25,6 +25,10 @@ export class ProjectTableComponent {
 
   new(): void {
     this.router.navigateByUrl("project/new")
+  }
+
+  update(id: any): void {
+    this.router.navigateByUrl("project/edit/".concat(id))
   }
 
   delete(data: any) : void {

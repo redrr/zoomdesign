@@ -1,6 +1,6 @@
 import {AfterContentChecked, AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {CrudService} from "../../crud.service";
+import {CrudService} from "../../services/crud.service";
 
 @Component({
   selector: 'app-home',

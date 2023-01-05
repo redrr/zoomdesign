@@ -1,8 +1,8 @@
 <?php
-$username = "synd_syndomds";
-$servername = "localhost";
-$password = "gaudi";
-$db_name = "synd_syndomds";
+$username = "c40843admin";
+$servername = "	mysql.rackhost.hu";
+$password = "zoomdesign";
+$db_name = "c40843syndom";
 
 // Create connection
 $db = new mysqli($servername, $username, $password, $db_name);

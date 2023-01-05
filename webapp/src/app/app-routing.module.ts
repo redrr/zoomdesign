@@ -9,6 +9,7 @@ import {ProjectTableComponent} from "./backoffice/projects/project-table/project
 import {ProjectComponent} from "./backoffice/projects/project/project.component";
 import {ProjectPartTableComponent} from "./backoffice/project-parts/project-part-table/project-part-table.component";
 import {ProjectPartComponent} from "./backoffice/project-parts/project-part/project-part.component";
+import {SecurityGuardService} from "./services/security-guard.service";
 
 const routes: Routes = [
   {
@@ -25,27 +26,48 @@ const routes: Routes = [
   },
   {
     path: "banners",
-    component: BannerTableComponent
+    component: BannerTableComponent,
+    canActivate: [SecurityGuardService]
   },
   {
     path: "banner/new",
-    component: BannerComponent
+    component: BannerComponent,
+    canActivate: [SecurityGuardService]
+  },
+  {
+    path: "banner/edit/:id",
+    component: BannerComponent,
+    canActivate: [SecurityGuardService]
   },
   {
     path: "projects",
-    component: ProjectTableComponent
+    component: ProjectTableComponent,
+    canActivate: [SecurityGuardService]
   },
   {
     path: "project/new",
-    component: ProjectComponent
+    component: ProjectComponent,
+    canActivate: [SecurityGuardService]
+  },
+  {
+    path: "project/edit/:id",
+    component: ProjectComponent,
+    canActivate: [SecurityGuardService]
   },
   {
     path: "project/:id/parts",
-    component: ProjectPartTableComponent
+    component: ProjectPartTableComponent,
+    canActivate: [SecurityGuardService]
   },
   {
-    path: "project/:id/part/new",
-    component: ProjectPartComponent
+    path: "project/:project_id/part/new",
+    component: ProjectPartComponent,
+    canActivate: [SecurityGuardService]
+  },
+  {
+    path: "project/:project_id/part/edit/:id",
+    component: ProjectPartComponent,
+    canActivate: [SecurityGuardService]
   }
 ];
 
