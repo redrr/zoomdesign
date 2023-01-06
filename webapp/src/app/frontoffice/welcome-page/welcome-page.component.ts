@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GlobalService} from "../../globals";
 
 @Component({
@@ -6,13 +6,18 @@ import {GlobalService} from "../../globals";
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.css']
 })
-export class WelcomePageComponent {
+export class WelcomePageComponent implements OnInit {
 
   _loading: boolean
 
   constructor(private globalService: GlobalService) {
    this._loading = globalService.welcome
   }
+
+  ngOnInit(): void {
+    setTimeout(() => this.open(), 3000)
+  }
+
 
   open(): void {
     this.globalService.welcome = false
