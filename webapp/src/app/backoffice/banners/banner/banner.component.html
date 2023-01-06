@@ -16,11 +16,11 @@
           </div>
           <div class="mb-3">
             <label for="image" class="form-label">Kép</label>
-            <input (change)="handleUpload($event, 'image')" accept="image/webp" class="form-control" type="file" id="image">
+            <input (change)="handleUpload($event, 'image')" class="form-control" type="file" id="image">
           </div>
           <div class="mb-3">
             <label for="image" class="form-label">Kép (mobil nézet)</label>
-            <input (change)="handleUpload($event, 'mobile_image')" accept="image/webp" class="form-control" type="file" id="mobile_image">
+            <input (change)="handleUpload($event, 'mobile_image')" class="form-control" type="file" id="mobile_image">
           </div>
           <button type="button" (click)="save()" class="btn btn-primary">Mentés</button>
         </form>
