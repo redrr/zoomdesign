@@ -314,3 +314,10 @@ i.fa-brands.fa-facebook-f {
 .cursor-pointer:hover {
   cursor: pointer;
 }
+
+@media (min-width: 1400px) {
+  .px-lg-5 {
+    padding-left: 6rem!important;
+    padding-right: 6rem!important;
+  }
+}
