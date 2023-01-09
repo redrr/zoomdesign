@@ -15,7 +15,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             // output data of each row
             $arr = array();
             while($row = $result->fetch_assoc()) {
-                array_push($arr, array('id' => $row["ID"], 'name' => $row["NAME"], 'desc' => $row["DESCRIPTION"]));
+                array_push($arr, array('id' => $row["ID"], 'name' => $row["NAME"], 'mobile' => $row["MOBILE"], 'desc' => $row["DESCRIPTION"]));
             }
             echo json_encode($arr);
         } else {

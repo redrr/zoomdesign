@@ -35,7 +35,7 @@ html body {
 }
 
 .contact-menu.active {
-  margin-top: -37px;
+  margin-top: -40px;
   transition: .7s ease-in-out;
 }
 

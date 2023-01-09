@@ -4,12 +4,12 @@
 <main class="container-fluid" style="margin-top: -37px">
   <div class="row">
     <div class="col p-0">
-      <div id="banners" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div id="banners" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
         <div id="btns" class="carousel-indicators container-fluid mx-auto px-0 px-md-2 px-3 px-lg-5"></div>
         <div class="carousel-inner">
           <div *ngFor="let banner of banners" class="carousel-item" data-bs-interval="false">
             <img class="w-100 d-none d-md-block" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/{{banner.name}}"/>
-            <img class="w-100 d-md-none" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/mobile/{{banner.name}}"/>
+            <img class="w-100 d-md-none" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/mobile/{{banner.mobile}}"/>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#banners" data-bs-slide="prev">

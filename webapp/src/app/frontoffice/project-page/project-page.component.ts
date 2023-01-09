@@ -23,7 +23,8 @@ export class ProjectPageComponent {
       this.title = localStorage.getItem("lang") === "en" ? data.en_name as string : data.hun_name as string
       this.updateLoading()
     })
-    service.get("project-part.php?id="+this.id).subscribe(data => {
+    service.get("project-part.php?project_id="+this.id).subscribe(data => {
+      console.log(data)
       this.images = data as []
       this.updateLoading()
     })
