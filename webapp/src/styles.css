@@ -264,6 +264,14 @@ button.sb-wrapper {
   transition: .2s!important;
 }
 
+button.sb-whatsapp {
+  filter: brightness(0.6) grayscale(1);
+}
+
+button.sb-tumblr {
+  filter: contrast(0.2) grayscale(1);
+}
+
 .sb-content {
   width: 2em!important;
 }
@@ -275,7 +283,7 @@ button.sb-wrapper:hover {
 }
 
 .welcome {
-  background: url("assets/img/welcome-bg.png");
+  background: url("assets/img/welcome-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

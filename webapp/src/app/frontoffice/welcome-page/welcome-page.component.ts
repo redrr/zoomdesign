@@ -15,7 +15,7 @@ export class WelcomePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => this.open(), 3000)
+    //setTimeout(() => this.open(), 5000)
   }
 
 
