@@ -16,7 +16,7 @@ html body {
 
 .maintitle {
   font-size: 1.8rem;
-  line-height: .8!important;
+  line-height: .9!important;
   font-family: Copperplate, 'Copperplate', sans-serif;
   letter-spacing: 2px;
   transform: scaleY(.9);
