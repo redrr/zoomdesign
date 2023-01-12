@@ -1,6 +1,7 @@
 html body {
   font-family: Verdana, sans-serif;
   background-color: black;
+  --nav-height: 80px
 }
 
 .subtitle {
@@ -9,23 +10,26 @@ html body {
   font-family: 'Avenir Next LT Pro', sans-serif;
   letter-spacing: 11.5px;
   text-shadow: 0px 0px 4px rgba(0,0,0,.8);
-  font-size: 52px;
-  margin-right: -8px;
+  font-size: 42px;
+  transform: scaleY(.5);
+}
+
+.maintitle {
+  font-size: 1.8rem;
+  line-height: .8!important;
+  font-family: Copperplate, 'Copperplate', sans-serif;
+  letter-spacing: 2px;
+  transform: scaleY(.9);
 }
 
 @media (min-width: 768px) {
   .subtitle {
     font-size: 52px;
-    margin-right: 0;
+    line-height: .6;
   }
-}
-
-.maintitle {
-  font-size: 2rem!important;
-  line-height: .8!important;
-  font-family: Copperplate, 'Copperplate', sans-serif;
-  letter-spacing: 2px;
-  transform: scaleY(.9);
+  .maintitle {
+    font-size: 2rem;
+  }
 }
 
 .contact-menu {
@@ -37,6 +41,11 @@ html body {
 .contact-menu.active {
   margin-top: -40px;
   transition: .7s ease-in-out;
+}
+
+#contact-list {
+  max-height: calc(100vh - var(--nav-height) + 12px);
+  overflow-y: auto;
 }
 
 .navbar-holder {
@@ -63,6 +72,8 @@ html body {
 .grid div div {
   margin: 1.1px!important;
   overflow: hidden;
+  position: relative;
+  text-align: center;
 }
 
 .grid div div img {
@@ -76,11 +87,6 @@ html body {
   cursor: pointer;
 }
 
-.img-title {
-  opacity: 0;
-  font-size: 25px;
-}
-
 .grid div:hover .img-title {
   opacity: 1;
   transition: opacity 1.2s ease-in-out;
@@ -91,13 +97,20 @@ html body {
 }
 
 .img-title {
-  margin-top: -35px;
-  z-index: 99;
-  position: relative;
+  width: 100%;
+  position: absolute;
   color: white;
   font-size: 1.2rem;
   font-weight: 100!important;
-  text-shadow: 0px 0px 12px rgb(0 0 0 / 100%)
+  text-shadow: 0px 0px 12px rgb(0 0 0 / 100%);
+  bottom: 0px;
+  font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+  .img-title {
+    opacity: 0;
+  }
 }
 
 .carousel-indicators {
@@ -238,7 +251,7 @@ html body {
 
 @media (min-width: 768px) {
   .w-md-100 {
-    width: 340px!important;
+    width: 380px!important;
   }
 }
 
@@ -323,9 +336,42 @@ i.fa-brands.fa-facebook-f {
   cursor: pointer;
 }
 
-@media (min-width: 1400px) {
-  .px-lg-5 {
-    padding-left: 6rem!important;
-    padding-right: 6rem!important;
+@media (min-width: 768px) {
+  .px-header-5 {
+    margin-left: 2rem!important;
+    margin-right: 2rem!important;
+    padding-left: 12px
+  }
+
+  .m-point-left {
+    margin-left: 2.5rem!important;
+    width: 380px!important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .px-header-5 {
+    padding-left: 5rem!important;
+    padding-right: 5rem!important;
+  }
+}
+
+#logo-icon {
+  width: calc(var(--nav-height)* 0.6);
+}
+
+#logo-icon-mobile {
+  width: 60px;
+  margin-top: 10px!important;
+}
+
+#logo-nav {
+  flex-direction: row;
+  gap: 12px
+}
+
+@media (min-width: 768px) {
+  #logo-nav {
+    gap: 17px
   }
 }

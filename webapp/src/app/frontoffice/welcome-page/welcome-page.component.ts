@@ -9,6 +9,7 @@ import {GlobalService} from "../../globals";
 export class WelcomePageComponent implements OnInit {
 
   _loading: boolean
+  _destroy: boolean = false
 
   constructor(private globalService: GlobalService) {
    this._loading = globalService.welcome
@@ -22,5 +23,6 @@ export class WelcomePageComponent implements OnInit {
   open(): void {
     this.globalService.welcome = false
     this._loading = false
+    setTimeout(() => this._destroy = true, 1000)
   }
 }
