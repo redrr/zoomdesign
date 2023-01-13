@@ -1,13 +1,8 @@
 <app-loading-page [loading]="loading"></app-loading-page>
 <app-header></app-header>
 <main class="container-fluid" style="margin-top: -37px">
-  <div class="row" style="position: fixed;
-    z-index: 9;
-    margin-top: 40px;
-    margin-left: -2px;">
-    <div class="col">
-      <h1 class="text-white" style="padding-left: 90px; font-size: 25px;text-shadow: 0px 0px 4px rgb(0 0 0)">{{title}}</h1>
-    </div>
+  <div (window:resize)="recalc()" class="w-100 project-title-holder" style="">
+    <h1 class="text-white w-100 project-title" style="">{{title}}</h1>
   </div>
   <div class="row grid">
     <div *ngFor="let image of images; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
