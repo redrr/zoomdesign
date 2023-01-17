@@ -1,5 +1,5 @@
 html body {
-  font-family: Verdana, sans-serif;
+  font-family: Verdana, Arial, system-ui, sans-serif;
   background-color: black;
   --nav-height: 80px
 }
