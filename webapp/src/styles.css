@@ -1,5 +1,6 @@
 html body {
   font-family: Verdana, Arial, system-ui, sans-serif;
+  font-style: normal;
   background-color: black;
   --nav-height: 80px
 }
