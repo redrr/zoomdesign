@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -7,6 +7,8 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() projectId: any
 
   constructor(private router: Router) {}
 
@@ -19,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   home(): void {
-    this.router.navigateByUrl("")
+    this.router.navigateByUrl(this.projectId ? `#${this.projectId}` : "")
   }
 
   open(): void {

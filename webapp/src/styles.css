@@ -6,7 +6,7 @@ html body {
 
 .subtitle {
   font-weight: 700;
-  line-height: .8;
+  line-height: .6;
   font-family: 'Avenir Next LT Pro', sans-serif;
   letter-spacing: 11.5px;
   text-shadow: 0px 0px 4px rgba(0,0,0,.8);
@@ -16,7 +16,7 @@ html body {
 
 .sub-title-holder {
   transform: scaleY(.6);
-  margin-top: -9px
+  margin-top: -6px
 }
 
 .maintitle {
@@ -108,11 +108,10 @@ html body {
   width: 100%;
   position: absolute;
   color: white;
-  font-size: 1.2rem;
   font-weight: 100!important;
-  text-shadow: 0px 0px 12px rgb(0 0 0 / 100%);
-  bottom: 0px;
-  font-size: 20px;
+  text-shadow: 0 0 12px rgb(0 0 0 / 100%);
+  bottom: 0;
+  font-size: 14px;
 }
 
 @media (min-width: 1200px) {
@@ -131,6 +130,9 @@ html body {
 @media (min-width: 768px) {
   .carousel-indicators {
     width: 100%;
+  }
+  .img-title {
+    font-size: 16px;
   }
 }
 
@@ -321,7 +323,7 @@ button.sb-wrapper:hover {
   width: 100%;
   margin: 0;
   transform-origin: 50% 45%;
-  animation: welcome-scale 2.2s ease-in-out;
+  animation: welcome-scale 2s ease-in-out;
   animation-iteration-count: 100000000;
   position: relative;
 }
@@ -386,10 +388,11 @@ i.fa-brands.fa-facebook-f {
 .project-title-holder {
   position: fixed;
   z-index: 9;
+  bottom: 50px;
 }
 
 .project-title {
-  text-align: center;
+  margin-left: -2px;
   font-size: 25px;
   text-shadow: 0px 0px 4px rgb(0 0 0);
 }

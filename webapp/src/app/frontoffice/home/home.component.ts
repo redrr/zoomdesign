@@ -1,5 +1,5 @@
 import {AfterContentChecked, AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {CrudService} from "../../services/crud.service";
 
 @Component({
@@ -7,7 +7,7 @@ import {CrudService} from "../../services/crud.service";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterContentChecked {
+export class HomeComponent implements AfterContentChecked, AfterViewInit {
 
   banners: any[] = []
   projects: any[] = []
@@ -15,6 +15,7 @@ export class HomeComponent implements AfterContentChecked {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private service: CrudService
   ) {
     service.get("banner.php").subscribe(data => {
@@ -32,10 +33,19 @@ export class HomeComponent implements AfterContentChecked {
       if (items.length > 0 && items.item(0)) {
         this.loading = false
         items.item(0)?.classList.add("active")
-        window.setTimeout(() => {
-        }, 500)
+        setTimeout(() => {
+          document.getElementById(`${this.route.snapshot.fragment}`)?.scrollIntoView()
+        }, 4000)
       }
     }
+  }
+
+  ngAfterViewInit(): void {
+    document.getElementsByName('img').forEach((v: any, i) => {
+      v.onload = () => {
+        console.log("loaded", v)
+      }
+    })
   }
 
   generate(): void {

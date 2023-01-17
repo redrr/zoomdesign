@@ -4,10 +4,10 @@
 <main class="container-fluid" style="margin-top: -37px">
   <div class="row">
     <div class="col p-0">
-      <div id="banners" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+      <div id="banners" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="true">
         <div id="btns" class="carousel-indicators container-fluid mx-auto px-header-5 m-point-left" style="width: 330px"></div>
         <div class="carousel-inner">
-          <div *ngFor="let banner of banners" class="carousel-item" data-bs-interval="false">
+          <div *ngFor="let banner of banners" class="carousel-item" data-bs-interval="3000">
             <img class="w-100 d-none d-md-block" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/{{banner.name}}"/>
             <img class="w-100 d-md-none" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/mobile/{{banner.mobile}}"/>
           </div>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="row grid" *ngIf="!loading">
-    <div (click)="navTo(project)" *ngFor="let project of projects; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
+    <div id="{{project.id}}" (click)="navTo(project)" *ngFor="let project of projects; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
       <div>
         <img src="https://api.syndom.hu/uploads/projects/{{project.img}}" class="img-fluid" alt="{{project.desc}}">
         <h3 class="img-title" style="text-shadow: 0px 0px 4px rgb(0 0 0)">{{getProjectName(project)}}</h3>

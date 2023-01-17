@@ -1,13 +1,13 @@
 <app-loading-page [loading]="loading"></app-loading-page>
-<app-header></app-header>
+<app-header [projectId]="id"></app-header>
 <main class="container-fluid" style="margin-top: -37px">
-  <div (window:resize)="recalc()" class="w-100 project-title-holder" style="">
+  <div class="d-none d-md-block w-100 project-title-holder px-header-5" style="">
     <h1 class="text-white w-100 project-title" style="">{{title}}</h1>
   </div>
   <div class="row grid">
     <div *ngFor="let image of images; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
       <div>
-        <img src="https://api.syndom.hu/uploads/projects/{{id}}/{{image.img}}" class="img-fluid" alt="{{image.desc}}">
+        <img src="https://api.syndom.hu/uploads/projects/{{id}}/{{image.img}}" class="img-fluid" alt="{{image.desc}}"/>
       </div>
     </div>
   </div>
