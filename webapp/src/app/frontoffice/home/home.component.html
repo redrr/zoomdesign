@@ -7,7 +7,7 @@
       <div id="banners" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-touch="true">
         <div id="btns" class="carousel-indicators container-fluid mx-auto px-header-5 m-point-left" style="width: 330px"></div>
         <div class="carousel-inner">
-          <div *ngFor="let banner of banners" class="carousel-item" data-bs-interval="3000">
+          <div *ngFor="let banner of banners" class="carousel-item" data-bs-interval="2500">
             <img class="w-100 d-none d-md-block" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/{{banner.name}}"/>
             <img class="w-100 d-md-none" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/mobile/{{banner.mobile}}"/>
           </div>

@@ -2,6 +2,8 @@ import {AfterContentChecked, AfterViewChecked, AfterViewInit, Component, OnInit}
 import {ActivatedRoute, Router} from "@angular/router";
 import {CrudService} from "../../services/crud.service";
 
+declare function load(): any
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -33,9 +35,10 @@ export class HomeComponent implements AfterContentChecked, AfterViewInit {
       if (items.length > 0 && items.item(0)) {
         this.loading = false
         items.item(0)?.classList.add("active")
-        setTimeout(() => {
+        //Scroll to item
+        /*setTimeout(() => {
           document.getElementById(`${this.route.snapshot.fragment}`)?.scrollIntoView()
-        }, 4000)
+        }, 4000)*/
       }
     }
   }
@@ -57,6 +60,7 @@ export class HomeComponent implements AfterContentChecked, AfterViewInit {
     }
     if (holder)
       holder.innerHTML = arr.join('')
+    load()
   }
 
   navTo(project: any) {
