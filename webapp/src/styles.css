@@ -1,5 +1,5 @@
 html body {
-  font-family: Verdana, "Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: Verdana, 'Jost', "Segoe UI", 'Roboto', "Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   background-color: black;
   --nav-height: 80px
 }
