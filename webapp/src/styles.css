@@ -3,6 +3,10 @@ html body {
   --nav-height: 80px
 }
 
+html body:not(.spec-mobile) {
+  font-family: Verdana, 'Jost', "Segoe UI", 'Roboto', "Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
 .subtitle {
   font-weight: 700;
   line-height: .6;
@@ -27,9 +31,6 @@ html body {
 }
 
 @media (min-width: 768px) {
-  html body {
-    font-family: Verdana, 'Jost', "Segoe UI", 'Roboto', "Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  }
   .subtitle {
     font-size: 52px;
     line-height: .6;
@@ -115,10 +116,13 @@ html body {
   font-size: 14px;
 }
 
+html body:not(.spec-mobile) .img-title {
+  font-weight: 100!important;
+}
+
 @media (min-width: 1200px) {
   .img-title {
     opacity: 0;
-    font-weight: 100!important;
   }
 }
 

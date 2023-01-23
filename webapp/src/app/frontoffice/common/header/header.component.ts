@@ -10,7 +10,13 @@ export class HeaderComponent implements OnInit {
 
   @Input() projectId: any
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      document.getElementsByName('body').forEach(e => {
+        e.classList.add("spec-mobile")
+      })
+    }
+  }
 
   ngOnInit(): void {
     if (!localStorage.getItem("lang")) {
