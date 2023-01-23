@@ -1,13 +1,13 @@
 html body {
   background-color: black;
   --nav-height: 80px;
-  font-family: 'Roboto', Arial!important;
+  font-family: sans-serif!important;
   margin-top: 20px;
 }
 
 html body:not(.spec-mobile) {
   margin-top: 0;
-  font-family: Verdana, 'Jost', "Segoe UI", 'Roboto', "Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: Verdana, 'Jost', "Segoe UI", 'Roboto', "Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 }
 
 .subtitle {
