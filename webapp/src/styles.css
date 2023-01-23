@@ -1,7 +1,7 @@
 html body {
   background-color: black;
   --nav-height: 80px;
-  font-family: 'Jost','Roboto', Arial!important;
+  font-family: 'Roboto', Arial!important;
   margin-top: 20px;
 }
 
