@@ -1,7 +1,7 @@
 html body {
   background-color: black;
   --nav-height: 80px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif!important;
 }
 
 html body:not(.spec-mobile) {
