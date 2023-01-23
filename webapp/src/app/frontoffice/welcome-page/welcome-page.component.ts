@@ -24,10 +24,12 @@ export class WelcomePageComponent implements OnInit {
   open(): void {
     this.globalService.welcome = false
     this._loading = false
-    this.meta.updateTag({
-      "name": "theme-color",
-      "content": "#ffffff"
-    })
+    setTimeout(() => {
+      this.meta.updateTag({
+        "name": "theme-color",
+        "content": "#ffffff"
+      })
+    }, 100)
     setTimeout(() => this._destroy = true, 1000)
   }
 }
