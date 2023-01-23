@@ -110,7 +110,6 @@ html body {
   width: 100%;
   position: absolute;
   color: white;
-  font-weight: 100!important;
   text-shadow: 0 0 12px rgb(0 0 0 / 100%);
   bottom: 0;
   font-size: 14px;
@@ -119,6 +118,7 @@ html body {
 @media (min-width: 1200px) {
   .img-title {
     opacity: 0;
+    font-weight: 100!important;
   }
 }
 
