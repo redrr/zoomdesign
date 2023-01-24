@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   home(): void {
-    this.router.navigateByUrl(this.projectId ? `#${this.projectId}` : "")
+    this.router.navigate([""])
   }
 
   open(): void {

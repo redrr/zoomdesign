@@ -14,6 +14,7 @@ export class HomeComponent implements AfterContentChecked, AfterViewInit {
   banners: any[] = []
   projects: any[] = []
   loading: boolean = true
+  crausel: any
 
   constructor(
     private router: Router,
@@ -23,6 +24,7 @@ export class HomeComponent implements AfterContentChecked, AfterViewInit {
     service.get("banner.php").subscribe(data => {
       this.banners = data as []
       this.generate()
+      console.log(this.crausel)
     })
     service.get("project.php").subscribe(data => {
       this.projects = data as []
@@ -60,7 +62,7 @@ export class HomeComponent implements AfterContentChecked, AfterViewInit {
     }
     if (holder)
       holder.innerHTML = arr.join('')
-    load()
+    this.crausel = load()
   }
 
   navTo(project: any) {
