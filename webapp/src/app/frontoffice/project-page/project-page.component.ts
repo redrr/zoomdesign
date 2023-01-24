@@ -18,7 +18,8 @@ export class ProjectPageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private service: CrudService, private globalService: GlobalService, private meta: Meta
+    private service: CrudService,
+    private meta: Meta
   ) {
     this.id = route.snapshot.paramMap.get("id") || "0"
     service.get("project.php?id="+this.id).subscribe((data: any) => {
@@ -31,11 +32,11 @@ export class ProjectPageComponent {
       this.updateLoading()
     })
     this.updateLoading()
-    if (!this.globalService.welcome)
-      this.meta.updateTag({
-        "name": "theme-color",
-        "content": "#ffffff"
-      })
+    this.meta.updateTag({
+      "name": "theme-color",
+      "content": "#ffffff"
+    })
+
   }
 
   updateLoading(): void {
