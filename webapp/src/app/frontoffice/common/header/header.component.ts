@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() projectId: any
 
-  constructor(private router: Router, private globalService: GlobalService, private meta: Meta) {
+  constructor(private router: Router) {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       document.getElementsByName('body').forEach(e => {
         e.classList.add("spec-mobile")
@@ -26,11 +26,6 @@ export class HeaderComponent implements OnInit {
       console.log("Automatic selected language:", userLang)
       localStorage.setItem("lang", (userLang && userLang === "hu-HU") ? "hun" : "en")
     }
-    if (!this.globalService.welcome)
-      this.meta.updateTag({
-        "name": "theme-color",
-        "content": "#ffffff"
-      })
   }
 
   home(): void {

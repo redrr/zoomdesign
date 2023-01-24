@@ -1,6 +1,8 @@
 import {AfterContentChecked, AfterViewChecked, Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CrudService} from "../../services/crud.service";
+import {GlobalService} from "../../globals";
+import {Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-project-page',
@@ -16,7 +18,7 @@ export class ProjectPageComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private service: CrudService
+    private service: CrudService, private globalService: GlobalService, private meta: Meta
   ) {
     this.id = route.snapshot.paramMap.get("id") || "0"
     service.get("project.php?id="+this.id).subscribe((data: any) => {
@@ -29,6 +31,11 @@ export class ProjectPageComponent {
       this.updateLoading()
     })
     this.updateLoading()
+    if (!this.globalService.welcome)
+      this.meta.updateTag({
+        "name": "theme-color",
+        "content": "#ffffff"
+      })
   }
 
   updateLoading(): void {
