@@ -8,8 +8,8 @@
         <div id="btns" class="carousel-indicators container-fluid mx-auto px-header-5 m-point-left" style="width: 330px"></div>
         <div class="carousel-inner">
           <div *ngFor="let banner of banners" class="carousel-item" data-bs-interval="2500">
-            <img class="w-100 d-none d-md-block" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/{{banner.name}}"/>
-            <img class="w-100 d-md-none" alt="{{banner.desc}}" src="https://api.syndom.hu/uploads/banners/mobile/{{banner.mobile}}"/>
+            <img class="w-100 d-none d-md-block" alt="{{banner.desc}}" src="https://api.zoomdesign.hu/uploads/banners/{{banner.name}}"/>
+            <img class="w-100 d-md-none" alt="{{banner.desc}}" src="https://api.zoomdesign.hu/uploads/banners/mobile/{{banner.mobile}}"/>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
   <div class="row grid" *ngIf="!loading">
     <div id="{{project.id}}" (click)="navTo(project)" *ngFor="let project of projects; index as i;" class="col-12 col-md-6 col-lg-4 p-0">
       <div>
-        <img src="https://api.syndom.hu/uploads/projects/{{project.img}}" class="img-fluid" alt="{{project.desc}}">
+        <img src="https://api.zoomdesign.hu/uploads/projects/{{project.img}}" class="img-fluid" alt="{{project.desc}}">
         <h3 class="img-title" style="text-shadow: 0px 0px 4px rgb(0 0 0)">{{getProjectName(project)}}</h3>
       </div>
     </div>

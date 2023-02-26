@@ -27,14 +27,9 @@
   </header>
   <div class="container-fluid d-block d-md-flex align-items-end">
     <div class="mx-auto px-header-5" style="width: fit-content;block-size: fit-content">
-      <div style="height: var(--nav-height);margin-top: calc(-1 * var(--nav-height) * 0.9); z-index: 1050; position: relative">
-        <div class="d-flex justify-content-center">
-          <img (click)="home()" class="img-fluid cp" id="logo-icon" alt="" src="assets/img/logo.webp">
-        </div>
-      </div>
-      <div style="margin-top: calc(var(--nav-height) * -1 * 0.4); padding-right: 12px; z-index: 1050; position: relative">
+      <div style="margin-top: calc(var(--nav-height) * -1 * var(--nav-top-mlpy)); padding-right: 12px; z-index: 1050; position: relative">
         <div class="d-flex justify-content-between">
-          <span (click)="home()" class="maintitle cp">SYNDOM</span>
+          <img (click)="home()" class="img-fluid logo-img cp" alt="" src="assets/img/logo.png" style="width: 100%;">
           <ul id="logo-nav" class="nav d-flex align-items-end">
             <li class="nav-item d-flex">
               <button type="button" (click)="setLang('en')" class="btn btn-link nav-link p-0 pe-1 text-dark {{isLang('en')}}" style="line-height: 1; border-radius: 0; border-right: 2px solid black">en</button>
@@ -53,58 +48,6 @@
       </div>
     </div>
   </div>
-<!--
-  <div id="header-top" class="bg-white shadow">
-    <div class="container-fluid bg-white sticky-top navbar-holder px-header-5">
-      <header class="d-block d-md-flex align-items-end justify-content-center justify-content-md-start">
-        <div class="mb-0">
-          <div class="text-dark d-flex align-items-end">
-            <span (click)="home()" class="maintitle cp">SYNDOM</span>
-            <div class="d-flex align-items-start">
-              <img (click)="home()" class="img-fluid cp" id="logo-icon" alt="" src="assets/img/logo.webp">
-            </div>
-            <ul id="logo-nav" class="nav d-flex">
-              <li class="nav-item d-flex">
-                <button type="button" (click)="setLang('en')" class="btn btn-link nav-link p-0 pe-1 text-dark {{isLang('en')}}" style="line-height: 1; border-radius: 0; border-right: 2px solid black">en</button>
-                <button type="button" (click)="setLang('hun')" class="btn btn-link nav-link p-0 ps-1 text-dark {{isLang('hun')}}" style="line-height: 1;">hu</button>
-              </li>
-              <li class="nav-item">
-                <button type="button" (click)="open()" class="btn btn-link nav-link p-0 contact-button text-dark" style="line-height: 1;">contact</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nav mx-auto d-none d-md-block" style="align-items: baseline">
-          <div class=" cursor-pointer d-none d-xl-block" (click)="music()">
-            <img class="me-1" style="height: 14px; margin-bottom: 4px" src="assets/img/kotta.png" alt=""/>music
-          </div>
-        </div>
-        <ul class="nav mb-0" style="align-items: baseline">
-          <div class="me-2 d-none d-lg-block" style="font-size: 12px">share:</div>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="copy"></share-button>
-          <share-button class="me-2 d-none d-lg-block" theme="circles-light" button="email"></share-button>
-
-          <share-button class="d-none d-lg-block" theme="circles-light" button="linkedin"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="facebook"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="pinterest"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="reddit"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="tumblr"></share-button>
-          <share-button class="me-2 d-none d-lg-block" theme="circles-light" button="vk"></share-button>
-
-          <share-button class="d-none d-lg-block" theme="circles-light" button="messenger"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="twitter"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="viber"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="whatsapp"></share-button>
-          <share-button class="d-none d-lg-block" theme="circles-light" button="telegram"></share-button>
-        </ul>
-      </header>
-    </div>
-  </div>
-  <div class="container-fluid px-3 px-lg-5" style="margin-top: -12px; transform: scaleY(.6)">
-    <div class="d-flex align-items-end justify-content-center justify-content-md-start">
-      <span class="me-md-2 text-white subtitle">architecture</span>
-    </div>
-  </div>-->
   <div id="contact-menu" class="position-absolute w-100 contact-menu">
     <div class="container-fluid p-0 p-md-2 ps-md-0">
       <div class="text-dark d-flex px-header-5 ps-0">
@@ -112,7 +55,7 @@
           <div id="contact-list" class="bg-white p-3 w-100 w-md-100">
             <div class="row mx-0">
               <div class="col">
-                <div class="mt-3">Syndom Stúdió Kft.</div>
+                <div class="mt-3">Zoomdesign Kft.</div>
                 <div>1037 Budapest, Bóbita utca 2.</div>
               </div>
             </div>
@@ -150,7 +93,7 @@
                         <img alt="" class="img-fluid img-profile" src="assets/img/bt_profile.webp">
                       </div>
                       <div class="col-4 d-flex align-items-end">
-                        <a class="text-secondary" href="mailto:bt@syndom.hu">
+                        <a class="text-secondary" href="mailto:bt@zoomdesign.hu">
                           <i class="fa-regular fa-envelope fa-xl"></i>
                         </a>
                       </div>
@@ -193,7 +136,7 @@
                         <img alt="" class="img-fluid img-profile" src="assets/img/rz_profile.webp">
                       </div>
                       <div class="col-4 d-flex align-items-end">
-                        <a class="text-secondary" href="mailto:rz@syndom.hu">
+                        <a class="text-secondary" href="mailto:rz@zoomdesign.hu">
                           <i class="fa-regular fa-envelope fa-xl"></i>
                         </a>
                       </div>
@@ -224,7 +167,7 @@
                         <img alt="" class="img-fluid img-profile" src="assets/img/jb_profile.webp">
                       </div>
                       <div class="col-4 d-flex align-items-end">
-                        <a class="text-secondary" href="mailto:bj@syndom.hu">
+                        <a class="text-secondary" href="mailto:bj@zoomdesign.hu">
                           <i class="fa-regular fa-envelope fa-xl"></i>
                         </a>
                       </div>

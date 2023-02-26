@@ -2,7 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 
-const AUTH_API = 'https://api.syndom.hu/';
+const AUTH_API = 'https://api.zoomdesign.hu/';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };

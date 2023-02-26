@@ -2,7 +2,7 @@
 $username = "c40843admin";
 $servername = "mysql.rackhost.hu";
 $password = "zoomdesign";
-$db_name = "c40843syndom";
+$db_name = "c40843zoomdesign";
 
 try {
     // Create connection

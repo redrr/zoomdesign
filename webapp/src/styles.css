@@ -125,12 +125,26 @@ html body {
   width: 329px;
 }
 
+.logo-img {
+  max-width: 210px;
+}
+
+body {
+  --nav-top-mlpy: 0.52
+}
+
 @media (min-width: 768px) {
   .carousel-indicators {
     width: 100%;
   }
   .img-title {
     font-size: 16px;
+  }
+  .logo-img {
+    max-width: 240px;
+  }
+  body {
+    --nav-top-mlpy: 0.57
   }
 }
 
