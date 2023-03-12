@@ -32,11 +32,6 @@ export class ProjectPageComponent {
       this.updateLoading()
     })
     this.updateLoading()
-    this.meta.updateTag({
-      "name": "theme-color",
-      "content": "#ffffff"
-    })
-
   }
 
   updateLoading(): void {

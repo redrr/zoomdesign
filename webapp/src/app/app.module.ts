@@ -16,12 +16,10 @@ import {ProjectTableComponent} from "./backoffice/projects/project-table/project
 import {HeaderComponent} from "./frontoffice/common/header/header.component";
 import {FooterComponent} from "./frontoffice/common/footer/footer.component";
 import {HomeComponent} from "./frontoffice/home/home.component";
-import {LoadingPageComponent} from "./frontoffice/loading-page/loading-page.component";
 import {ProjectPageComponent} from "./frontoffice/project-page/project-page.component";
 import {ShareIconsModule} from "ngx-sharebuttons/icons";
 import {ShareButtonsModule} from "ngx-sharebuttons/buttons";
 import {ShareButtonModule} from "ngx-sharebuttons/button";
-import {WelcomePageComponent} from "./frontoffice/welcome-page/welcome-page.component";
 
 @NgModule({
   declarations: [
@@ -39,9 +37,7 @@ import {WelcomePageComponent} from "./frontoffice/welcome-page/welcome-page.comp
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    LoadingPageComponent,
     ProjectPageComponent,
-    WelcomePageComponent
   ],
   imports: [
     BrowserModule,
