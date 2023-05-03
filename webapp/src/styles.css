@@ -322,35 +322,6 @@ button.sb-wrapper:hover {
   transition: .2s!important;
 }
 
-.welcome {
-  background: url("assets/img/welcome-bg.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 99999999;
-}
-
-.welcome .logo {
-  width: 100%;
-  margin: 0;
-  position: absolute;
-}
-
-.welcome .glow {
-  width: 100%;
-  margin: 0;
-  transform-origin: 50% 45%;
-  animation: welcome-scale 2s ease-in-out;
-  animation-iteration-count: 100000000;
-  position: relative;
-}
-
-@keyframes welcome-scale {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 .profile i {
   opacity: .5!important;
 }
