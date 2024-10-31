@@ -9,8 +9,8 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
 
-  private email: string = "a@a.a"
-  private pwd: string = "asd123"
+  private email: string = "bt@zoomdesign.hu"
+  private pwd: string = "hfViEDL36zhl"
   form: FormGroup = new FormGroup<any>({
     email: new FormControl(null),
     password: new FormControl(null)

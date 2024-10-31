@@ -20,7 +20,7 @@ export class ProjectPartTableComponent {
       console.log(data)
       this.name = data.hun_name
     })
-    service.get(this.endpoint.concat("?id=").concat(this.id)).subscribe(data => {
+    service.get(this.endpoint.concat("?project_id=").concat(this.id)).subscribe(data => {
       console.log(data)
       this.list = data as []
     })
